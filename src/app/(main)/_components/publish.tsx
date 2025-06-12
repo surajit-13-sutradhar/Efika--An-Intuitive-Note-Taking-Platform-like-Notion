@@ -13,7 +13,7 @@ import { api } from "../../../../convex/_generated/api";
 import {useState} from "react";
 import {toast} from "sonner";
 import { Button } from "@/components/ui/button";
-import {Copy, Globe, Check} from "lucide-react"
+import {Copy, Globe, Check, Globe2} from "lucide-react"
 
 interface PublishProps {
     initialData: Doc<"documents">
@@ -76,11 +76,11 @@ export const Publish = ({
     return (
         <Popover>
             <PopoverTrigger asChild>
-                <Button>
+                <Button className="cursor-pointer">
                     Publish
                     {initialData.isPublished && (
                         <Globe 
-                            className="text-sky-500 size-4 ml-2"
+                            className="text-sky-500 size-4 ml-2 animate-pulse"
                         />
                     )}
                 </Button>
@@ -110,6 +110,9 @@ export const Publish = ({
                                 )}
                             </Button>
                         </div>
+                        <Button size="sm" className="w-full text-xs cursor-pointer" disabled={isSubmitting} onClick={onUnpublish} >
+                            Unpublish
+                        </Button>
                     </div>
                 ) : (
                     <div className="flex flex-col items-center justify-center">
@@ -124,9 +127,10 @@ export const Publish = ({
                         <Button
                             disabled={isSubmitting}
                             onClick={onPublish}
-                            className="w-full text-xs"
+                            className="w-full text-xs cursor-pointer"
                             size="sm"
                         >
+                            Publish Effy
                         </Button>
                     </div>
                 )}
