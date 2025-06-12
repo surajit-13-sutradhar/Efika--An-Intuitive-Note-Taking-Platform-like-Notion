@@ -1,4 +1,10 @@
 import Link from "next/link";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: "Page Not Found",
+    description: "The page you are looking for does not exist."
+};
 
 export default function NotFoundCatch() {
     return (
@@ -14,4 +20,8 @@ export default function NotFoundCatch() {
             </Link>
         </div>
     )
-} 
+}
+
+// This ensures the page is statically generated
+export const dynamic = 'force-static';
+export const revalidate = false; 
