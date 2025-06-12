@@ -25,7 +25,7 @@ const DocumentIdPage = ({
     params
 }: DocumentIdProps) => {
     // unwrap the params object using React.use()
-    const Editor = useMemo(() => dynamic(() => import("@/components/editor"), {ssr: false}) , [])
+    // const Editor = useMemo(() => dynamic(() => import("@/components/editor"), {ssr: false}) , [])
     const unwrappedParams = use(params);
     
     const document = useQuery(api.documents.getById, {
