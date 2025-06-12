@@ -10,7 +10,6 @@ import { Id } from "../../../../../../convex/_generated/dataModel";
 
 import { Toolbar } from "@/components/toolbar";
 import {Cover} from "@/components/cover";
-import Editor from "@/components/editor";
 import dynamic from "next/dynamic";
 import {useMemo} from "react";
 
@@ -25,7 +24,7 @@ const DocumentIdPage = ({
     params
 }: DocumentIdProps) => {
     // unwrap the params object using React.use()
-    // const Editor = useMemo(() => dynamic(() => import("@/components/editor"), {ssr: false}) , [])
+    const Editor = useMemo(() => dynamic(() => import("@/components/editor"), {ssr: false}) , [])
     const unwrappedParams = use(params);
     
     const document = useQuery(api.documents.getById, {

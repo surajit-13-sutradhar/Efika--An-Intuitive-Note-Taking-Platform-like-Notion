@@ -8,8 +8,6 @@ import { useConvexAuth } from "convex/react";
 import { Button } from "@/components/ui/button";
 import { Spinner } from "@/components/spinner";
 import Link from "next/link";
-import { User } from "lucide-react";
-import { ClerkProvider } from "@clerk/nextjs";
 
 const Navbar = () => {
     const { isAuthenticated, isLoading} = useConvexAuth()

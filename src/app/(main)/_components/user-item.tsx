@@ -2,9 +2,9 @@
 
 import { ChevronsLeftRight } from "lucide-react";
 
-import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
+import {Avatar, AvatarImage} from "@/components/ui/avatar";
 
-import {DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger, DropdownMenuSeparator, DropdownMenuLabel} from "@/components/ui/dropdown-menu";
+import {DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger, DropdownMenuSeparator} from "@/components/ui/dropdown-menu";
 
 import { SignOutButton, useUser } from "@clerk/clerk-react";
 

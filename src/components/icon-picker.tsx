@@ -8,7 +8,6 @@ import {
     PopoverContent,
     PopoverTrigger
 } from "@/components/ui/popover";
-import { Children } from "react";
 
 interface IconPickerProps {
     onChange: (icon: string) => void;

@@ -4,7 +4,7 @@ import "@blocknote/core/fonts/inter.css";
 import { useCreateBlockNote } from "@blocknote/react";
 import { BlockNoteView } from "@blocknote/mantine";
 import "@blocknote/mantine/style.css";
-import { BlockNoteEditor, PartialBlock } from "@blocknote/core";
+import { PartialBlock } from "@blocknote/core";
 import { useEdgeStore } from "@/lib/edgestore";
 import { useCallback } from "react";
 

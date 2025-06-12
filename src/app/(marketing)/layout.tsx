@@ -1,7 +1,6 @@
 import React from "react";
 
 import Navbar from "./_components/navbar";
-import { ClerkProvider } from "@clerk/nextjs";
 
 const MarketingLayout = ({
     children

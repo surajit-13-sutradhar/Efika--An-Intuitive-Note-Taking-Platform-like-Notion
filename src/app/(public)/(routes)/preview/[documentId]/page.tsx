@@ -10,7 +10,6 @@ import { Id } from "../../../../../../convex/_generated/dataModel";
 
 import { Toolbar } from "@/components/toolbar";
 import {Cover} from "@/components/cover";
-import Editor from "@/components/editor";
 import dynamic from "next/dynamic";
 import {useMemo} from "react";
 

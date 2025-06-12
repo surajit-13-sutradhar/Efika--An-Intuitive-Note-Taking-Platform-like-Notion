@@ -2,7 +2,7 @@
 
 import { Id } from "../../../../convex/_generated/dataModel";
 
-import { ChevronDown, ChevronRight, LucideIcon, MoreHorizontal, Plus, Trash, Trash2Icon } from "lucide-react";
+import { ChevronDown, ChevronRight, LucideIcon, MoreHorizontal, Plus, Trash2Icon } from "lucide-react";
 import { Skeleton } from "@/components/ui/skeleton";
 import { useRouter } from "next/navigation";
 
