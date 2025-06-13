@@ -11,6 +11,11 @@ export default defineSchema({
         coverImage: v.optional(v.string()),
         icon: v.optional(v.string()),
         isPublished: v.boolean(),
+        documentLinks: v.optional(v.array(v.object({
+            targetDocumentId: v.id("documents"),
+            linkText: v.optional(v.string()),
+            position: v.number()
+        })))
     })
     .index("by_user", ["userId"])
     .index("by_user_parent", ["userId", "parentDocument"])

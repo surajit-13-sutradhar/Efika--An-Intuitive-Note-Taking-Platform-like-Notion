@@ -10,6 +10,9 @@ import {toast} from "sonner"
 
 import { api } from "../../../../../convex/_generated/api";
 
+// This ensures the page is not prerendered
+export const dynamic = 'force-dynamic';
+
 const DocumentsPage = () => {
     const router = useRouter();
     const {user} = useUser();

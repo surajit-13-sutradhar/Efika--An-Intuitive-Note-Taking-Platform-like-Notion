@@ -146,6 +146,8 @@ const variants = {
                 className="h-full w-full rounded-md object-cover"
                 src={imageUrl}
                 alt={acceptedFiles[0]?.name}
+                width={500}
+                height={300}
                 />
             ) : (
                 // Upload Icon

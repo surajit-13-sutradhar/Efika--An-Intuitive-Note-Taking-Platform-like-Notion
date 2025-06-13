@@ -31,7 +31,7 @@ const Editor = ({
 
     const editor = useCreateBlockNote({
         initialContent: initialContent ? JSON.parse(initialContent) as PartialBlock[] : undefined,
-        uploadFile: handleUpload
+        uploadFile: handleUpload,
     });
 
     const handleChange = useCallback(() => {
