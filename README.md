@@ -1,6 +1,6 @@
 # Efika - A Full-Stack Notion Clone
 
-![Efika Dashboard](public/main_img.png)
+![Efika Dashboard](./public/main_img.png)
 
 A feature-rich Notion clone built with modern web technologies, offering a seamless note-taking and document management experience.
 
