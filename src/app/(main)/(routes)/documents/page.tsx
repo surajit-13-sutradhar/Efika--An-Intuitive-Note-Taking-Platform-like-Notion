@@ -61,10 +61,10 @@ const DocumentsPage = () => {
                 <PlusCircle className="size-4 mr-2" />
                 Create an Effy
             </Button>
-            <Button onClick={onCreateFlow} className="cursor-pointer">
+            {/* <Button onClick={onCreateFlow} className="cursor-pointer">
                 <PlusCircle className="size-4 mr-2" />
                 Create a Flow
-            </Button>
+            </Button> */}
         </div>
     );
 }
