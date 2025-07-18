@@ -18,7 +18,7 @@ const DocumentsPage = () => {
     const {user} = useUser();
     const create = useMutation(api.documents.create);
 
-    const onCreate = () => {
+    const onCreateDocument = () => {
         const promise = create({title: "Untitled"})
             .then((documentId) => router.push(`/documents/${documentId}`))
 
@@ -33,6 +33,20 @@ const DocumentsPage = () => {
         });
     }
 
+    const onCreateFlow = () => {
+        const promise = create({title: "Untitled"})
+
+        toast.promise(promise, {
+            loading: "Creating Flow...",
+            success: () => {
+                return "Flow Created";
+            },
+            error: (error) => {
+                return `Error creating Flow: ${error.message}`
+            }
+        });
+    }
+
     return (
         <div className="h-full flex flex-col items-center justify-center space-y-4">
             <span className="text-black dark:text-white">
@@ -43,9 +57,13 @@ const DocumentsPage = () => {
                 Welcome to {user?.firstName}&apos;s Efika
             </h2>
 
-            <Button onClick={onCreate} className="cursor-pointer">
+            <Button onClick={onCreateDocument} className="cursor-pointer">
                 <PlusCircle className="size-4 mr-2" />
                 Create an Effy
+            </Button>
+            <Button onClick={onCreateFlow} className="cursor-pointer">
+                <PlusCircle className="size-4 mr-2" />
+                Create a Flow
             </Button>
         </div>
     );
